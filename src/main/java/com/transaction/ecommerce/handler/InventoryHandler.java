@@ -10,8 +10,12 @@ public class InventoryHandler {
     @Autowired
     InventoryRepository inventoryRepository;
 
-    public Product saveOrder(Product product) {
-        return inventoryRepository.save(product);
+    public Product getProduct(int id) {
+        return inventoryRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Product not available with id " + id));
     }
 
+    public void updateProductDetails(Product product) {
+        inventoryRepository.save(product);
+    }
 }

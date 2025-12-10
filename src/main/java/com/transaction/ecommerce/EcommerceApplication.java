@@ -1,4 +1,4 @@
-package com.redis.redisApp;
+package com.transaction.ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
