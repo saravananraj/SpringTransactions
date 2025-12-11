@@ -17,8 +17,8 @@ public class OrderProcessingController {
 
     private final OrderProcessingService orderProcessingService;
 
-    public OrderProcessingController(InventoryHandler inventoryHandler, OrderHandler orderHandler) {
-        this.orderProcessingService = new OrderProcessingService(inventoryHandler, orderHandler);
+    public OrderProcessingController(OrderProcessingService orderProcessingService) {
+        this.orderProcessingService = orderProcessingService;
     }
 
     @PostMapping

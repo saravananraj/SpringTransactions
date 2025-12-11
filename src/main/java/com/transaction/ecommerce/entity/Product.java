@@ -19,4 +19,11 @@ public class Product {
     private String name;
     private int price;
     private int stockQuantity;
+
+    public Product(int id, String name, double price, int stockQuantity) {
+        this.id = id;
+        this.name = name;
+        this.price = (int)price;
+        this.stockQuantity = stockQuantity;
+    }
 }
